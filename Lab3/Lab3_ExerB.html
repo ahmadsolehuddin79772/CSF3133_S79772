@@ -1,0 +1,41 @@
+<!DOCTYPE html> <!-- Error 1 (Line 1): Missing "html" after DOCTYPE. -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ticket Booking</title>
+</head>
+<body>
+<div id="header">
+    <h1>e-Ticket <span>Your Campus Cinema</span></h1> <!-- Error 2 (Line 9): Incorrect closing position of </span>. -->
+</div>
+<div id="content"> <!-- Error 3 (Line 11): Use <div> instead of <span> because content contains block elements. -->
+    <h2>Book Your Ticket</h2>
+    <p>Promotion: tickets &lt; RM10 for students &amp; staff!</p> <!-- Error 4 (Line 13): Escape < as &lt;. -->
+    <form action="booking.php" oninput="total.value = Number(adult.value) + Number(child.value); price.value = Number(adult.value) * 12 + Number(child.value) * 8"> <!-- Error 5 (Line 14): Convert inputs to numbers to prevent string concatenation; add price calculation. -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required autofocus><br>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required><br> <!-- Error 6 (Line 18): Correct "emial" to "email" and add required. -->
+        <label for="date">Show date:</label>
+        <input type="date" id="date" name="date"><br>
+        <label for="movie">Movie:</label>
+        <input id="movie" name="movie" list="movies"><br> <!-- Error 7 (Line 22): Change list to match the datalist id. -->
+        <datalist id="movies"> <!-- Error 8 (Line 23): Change "movielist" to "movies". -->
+            <option value="Space Rangers">
+            <option value="Kampung Comedy">
+        </datalist>
+        <label for="adult">Adult tickets:</label>
+        <input type="number" id="adult" name="adult" min="0" value="0"><br>
+        <label for="child">Child tickets:</label>
+        <input type="number" id="child" name="child" min="0" value="0"><br>
+        <label for="rating">Rate our service:</label>
+        <input type="range" id="rating" name="rating" min="1" max="5"><br> <!-- Error 9 (Line 32): Reverse min and max values. -->
+        Total tickets: <output name="total" for="adult child">0</output><br> <!-- Error 10 (Line 33): Correct "adult kid" to "adult child". -->
+        <input type="submit" value="Book Now">
+    </form>
+</div>
+<div id="footer">
+    <p>&copy; 2026 CineKampus. All rights reserved.</p> <!-- Error 11 (Line 38): Correct &Copy; to &copy;. Also use correct entities for ®, < and &. -->
+</div>
+</body>
+</html>
