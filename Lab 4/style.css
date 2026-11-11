@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: black;
+    background-color: white;
+}
+
+header {
+    padding: 35px 15px;
+    text-align: center;
+    color: white;
+    background-color: #087e8b;
+}
+
+h1 {
+    margin: 0 0 12px;
+    text-decoration: overline;
+}
+
+h2 {
+    color: #087e8b;
+    text-align: center;
+    text-decoration: underline;
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 25px auto;
+}
+
+nav {
+    background-color: #064b59;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li a {
+    display: block;
+    padding: 15px 22px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav li a:hover {
+    background-color: #f4a261;
+    color: #17252a;
+}
+
+#destinations {
+    padding: 20px 0;
+}
+
+.destination-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    flex: 1 1 250px;
+    padding: 20px;
+    border: 1px solid #b7d9dc;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.card h3 {
+    color: #087e8b;
+}
+
+.price {
+    color: red;
+    font-weight: bold;
+}
+
+.old-price {
+    margin-right: 8px;
+    color: grey;
+    font-weight: normal;
+    text-decoration: line-through;
+}
+
+.seat-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#video {
+    padding: 20px 0;
+    text-align: center;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.caption {
+    color: grey;
+    font-style: italic;
+}
+
+#trip {
+    padding: 20px 0;
+}
+
+.trip-form {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 22px;
+    border: 1px solid lightblue;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.trip-form > label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.trip-form input[type="text"],
+.trip-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+
+fieldset {
+    margin-top: 15px;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+}
+
+fieldset label {
+    display: inline-block;
+    margin: 7px 12px 7px 0;
+}
+
+button {
+    margin-top: 18px;
+    padding: 11px 22px;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    background-color: cyan;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #064b59;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: #064b59;
+}
+
+footer a {
+    color: #ffe0a3;
+}
+
+a:link {
+    color: #087e8b;
+}
+
+a:visited {
+    color: #7251a2;
+}
+
+a:hover {
+    color: #d35400;
+}
+
+a:active {
+    color: #c0392b;
+}
+
+nav a:link,
+nav a:visited,
+nav a:hover,
+nav a:active {
+    color: white;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .destination-container {
+        flex-direction: column;
+    }
+
+    .trip-form {
+        width: 100%;
+    }
+}
