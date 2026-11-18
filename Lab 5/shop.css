@@ -1,0 +1,50 @@
+body { /* Page font and background */
+    font-family: 'Roboto', sans-serif; /* Error (Line 2): Robotto misspelled; corrected to Roboto. */
+    background-image: url("books.jpg");
+    background-repeat: no-repeat; /* Error (Line 4): Incorrect no repeat syntax; corrected to no-repeat. */
+    background-position: right top; /* Error (Line 5): Corrected background positioning property spelling. */
+    line-height: 1.6;
+}
+ul { /* Navigation bar */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li {
+    float: left;
+}
+li a {
+    display: block; /* Error (Line 18): Changed inline to block for navigation links. */
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover, li a.active { /* Error (Line 23): Incorrect li:a:hover selector; corrected selector and added active class. */
+    background-color: #1B4F72;
+}
+#products { /* Product table */
+    border-collapse: collapse; /* Error (Line 27): Changed collapsed to collapse. */
+    width: 100%;
+}
+#products td, #products th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+#products tr:nth-child(even) { /* Error (Line 34): Changed nth-child(2) to nth-child(even). */
+    background-color: #f2f2f2;
+}
+#products tr:hover { /* Error (Line 37): Changed hovered to hover. */
+    background-color: #ddd;
+}
+#products th {
+    background-color: #E67E22;
+    color: white;
+    text-align: center; text-transform: uppercase; padding-top: 12px; padding-bottom: 12px;
+}
+footer { /* Footer styling */
+    background-color: #f1f1f1; /* Error (Line 45): Added missing semicolon. */
+    text-align: center;
+    padding: 10px;
+}
